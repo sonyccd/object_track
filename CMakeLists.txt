@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8.4)
+project(object_track)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+set(SOURCE_FILES objectTrackingTut.cpp)
+add_executable(object_track ${SOURCE_FILES})
+target_link_libraries( object_track ${OpenCV_LIBS} )
